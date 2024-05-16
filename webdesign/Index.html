@@ -1,117 +1,449 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head>   
+    
+  
+
+    
     <style>
+
+
     .head{
+      padding: 10px;
+      background-color: rgb(229, 237, 221);
       display: flex;
-      height: 45px;
+      height: 38px;
       position: fixed;
       top: 0px;
       left: 0px;
       right: 0px; 
+      transition: 0.1s;
     }  
-    
     .head-left{
       display: flex;
       width: 200px;
-      margin-right: 50px;
-
+      margin-right: 100px;
       padding-left: 45px;
       
     }  
-      
     .head-mid{
       display: flex;
       flex: 1;
-      
     }  
+    .head-mid input{
+      flex: 1;
+      border-color:rgba(0,0,0,1);
+      margin-right:-1px;
+      border-width:1px;
+      border-style:solid;
+      border-radius: 10px 0 0 10px;
+    }
+    .head-mid img{
+      padding-top:2px;
+      border-width:1px;
+      border-style:solid;
+      border-color:rgba(0,0,0,1);
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+    }
     .head-right{
       display: flex;
       width: 300px;
       margin-left: 50px;
-  
+    }
+    .head-picture{
+      margin-left:230px;
+      border-radius:22px;
+      vertical-align: middle;
+      cursor:pointer;
     }
     
+
     .course{
+      background-color: rgb(229, 237, 221);
       position: fixed;
-      top: 100px;
-      left: 0;
-      width: 150px;
-      bottom: 0px;
-      overflow-y: auto;
-
-    }  
-    
-    .catalogue{
-      position: fixed;
-      top: 30%;
+      top: 55px;
+      left: 0px;
       right: 0;
-      height: 200px;
-      width: 150px;
-      overflow-y: auto;
+      height: 35px;
+      overflow-x: auto;
+      border: 1px solid rgba(0,0,0, 0.2);
+      padding-left: 80px;
+    }  
+    .course li {
+      margin-top: 5px;
+      padding: 3px;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-radius: 5px;
+      list-style: none;
+      margin-right: 20px;
+      color: black;
+      background-color: rgba(0,0,0, 0.1);
+      font-size: 14px;
+      transition: 0.1s;
+      cursor: pointer;
+    }
+    .course li:hover{
+      background-color: rgba(0,0,0, 0.2);
+    }
+    .course li:active{
+      background-color: rgba(0,0,0, 1);
+      color: white;
+    }
+    .course li:visited{
+      background-color: rgba(0,0,0, 1);
+      color: white;
+    }
+
+
+
+    .navigate{
+      display: flex;
+      flex-flow: column;
+      position: fixed;
+      top: 200px;
+      left: 0px;
+      height: 400px;
+      width: 50px;
 
     }
-    .catalogue ul li{
-      padding-bottom: 15px;
-      
+    .homepage-icon,.game-icon,.playlist-icon{
+      height: 55px;
+      padding-left: 8px;
+      padding-right: 8px;
+      border-radius: 10px;
+      background-color: white;
+      transition: 0.1s;
+      cursor: pointer;
     }
-    
+    .homepage-icon:hover,.game-icon:hover,.playlist-icon:hover{
+      background-color: rgba(0,0,0, 0.1);
+    }
+
+    .vdo{
+      padding: 20px;
+      box-shadow: rgba(0,0,0, 0.2);
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0,0.07);
+      display: grid;
+      grid-template-columns:1fr 1fr 1fr;
+      column-gap: 15px;
+      row-gap: 20px;
+    }
+    .pct1{
+      border-radius: 15px;
+    }
+    .intro{
+      width: 240px;
+      font-size: 13px;
+      margin-top: 0px;
+      font-weight: bold;
+    }
+
+
+
+    .click-head-picture{
+    transition: 0.1s;
+    display: none;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.5);
+    background-color: rgb(220, 217, 217);
+    border-radius: 3px;
+    position:fixed;
+    top: 10px;
+    right: 90px;
+    width: 150px;
+    height: 250px;
+  }
+  .click-head-picture ul{
+    margin-top: 60px;
+    padding: 0px;
+    width: 100%;
+    list-style-type: none;
+    font-size: 13px;
+    line-height: 20px;
+  }
+ 
+  .click-head-picture li{
+    transition: 0.1s;
+    line-height: 21px;
+    padding-left: 15px;
+    cursor: pointer;
+  }
+  .click-head-picture li:hover{
+    background-color: rgba(0,0,0,0.1);
+    font-size: 15px;
+  }
+
+        
     </style>
+
 
 
   </head>
   
   
-  <body>
+  <body style="
+  background-color: rgba(0, 0, 0, 0.05);
+  padding-left: 70px;
+  padding-top: 120px;
+  ">
+  
+
+
+  
   <div class="head">
     <div class="head-left">
-      <img height="45px" src="http://picture.gptkong.com/20240513/20009439e5dd104e1ab48b390c6c21ee8c.png">
-  
+
     </div>
-    
+
     <div class="head-mid">
-      <input type="text" placeholder="search"
-      style="
-      flex: 1;
-      border-color:rgba(0,0,0,1);
-      margin-right:-1px;
-      border-width:1px;
-      border-style:solid
-      
-      ">
+      <input type="text" placeholder="搜索">
     
-      <img 
-      style="
-      padding-top:2px;
-      border-width:1px;
-      border-style:solid;
-      border-color:rgba(0,0,0,1);"
-      height="41px" src="http://picture.gptkong.com/20240513/1824ea1a3fc9644e828742196687baf56a.png">
+      <img height="34.5px" src="http://picture.gptkong.com/20240513/1824ea1a3fc9644e828742196687baf56a.png">
     </div>
     
     <div class="head-right">
-      <img  style="
-      margin-left:100px;
-      border-radius:22px;
-      height="45px"  src="http://picture.gptkong.com/20240513/18201557fcf764432083ddb4edcf74a860.jpg">
+      <img  class="head-picture"     height="100%"  src="http://picture.gptkong.com/20240513/18201557fcf764432083ddb4edcf74a860.jpg">
     </div>
+
+      <div class="course">
+    <ul style="
+      overflow-x: auto;
+      white-space: nowrap;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex-direction: row;
+      padding-left: 50px;
+
+    ">
+      <li>全部</li>
+      <li>前端</li>
+      <li>编程语言</li>
+      <li>数据结构</li>
+      <li>算法设计</li>
+      <li>数学</li>
+    </ul>
+  </div>
   </div>
   
-  <div class="course"></div>
+
+
+
+
   
-  
-  <div class="catalogue">
-        <ul style="
-    ">
-      <li>introduction</li>
-      <li> tools</li>
-      <li> document</li>
-      <li> vedio</li>
-      <li> comment</li>
-    </ul>
+
+
+  <div class="navigate">
+    <div class="homepage-icon">
+      <div style="margin-top: 5px; width: 30px;  height: 30px; display: block; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><g><path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z"></path></g></svg>  
+      <p style="
+      font-size: 10px; 
+      margin: 0px;
+      vertical-align: top;
+      text-align: center;
+      ">首页</p>
+      </div>
+    </div>
+
+    <div class="game-icon">
+      <img height="30" width="30" 
+      style="
+      margin: 0px;
+      padding-left: 1.5px;
+      padding-top: 5px;
+      "
+      src="http://picture.gptkong.com/20240514/1525589cf64cee4ed8855a0236bd6e3e6f.png">
+
+      <p style="
+      font-size: 10px; 
+      margin: 0px;
+      margin-top: -7px;
+      vertical-align: top;
+      text-align: center;
+      ">游戏</p>
+    </div>
+ 
+    <div class="playlist-icon">
+      <div style="width: 25px; padding-left: 4px; 
+      height: 30px; display: block; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M15 19v-8l7 4-7 4Zm7-12H2v2h20V7Zm-9 6H2v-2h11v2Zm0 4H2v-2h11v2Z"></path></svg></div>
       
-    </ul>
-    
-  </div>  
-  </body>
+    </div>
+    <p style="
+    font-size: 10px; 
+    margin: 0px;
+    margin-top: -30px;
+    vertical-align: top;
+    text-align: center;
+    ">列表</p>
+
+  </div>
+
+  <div class="vdo">
+<div>  
+  <div>
+   <img class="pct1"  width="100%" src="https://i.ytimg.com/vi/p1QU3kLFPdg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnxuRiVlwwfIWUI0t-nSFxwCq7Rg"
+  </div>
+
+  <div>
+
+
+
+   <div class="introduction">
+      <p  class="intro">
+          How to put an HTML website online (on the Internet)
+      </p>
+   </div>
+  
+  </div>
+</div>
+
+  
+</div>
+
+<div>  
+  <div>
+   <img class="pct1"  width="100%" src="https://i.ytimg.com/vi/p1QU3kLFPdg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnxuRiVlwwfIWUI0t-nSFxwCq7Rg"
+  </div>
+
+  <div>
+
+
+
+   <div class="introduction">
+      <p  class="intro">
+          How to put an HTML website online (on the Internet)
+      </p>
+   </div>
+  
+  </div>
+</div>
+
+  
+</div>
+
+<div>  
+  <div>
+   <img class="pct1"  width="100%" src="https://i.ytimg.com/vi/p1QU3kLFPdg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnxuRiVlwwfIWUI0t-nSFxwCq7Rg"
+  </div>
+
+  <div>
+
+
+   <div class="introduction">
+      <p  class="intro">
+          How to put an HTML website online (on the Internet)
+      </p>
+   </div>
+  
+  </div>
+</div>
+
+  
+</div>
+
+<div>  
+  <div>
+   <img class="pct1"  width="100%" src="https://i.ytimg.com/vi/p1QU3kLFPdg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnxuRiVlwwfIWUI0t-nSFxwCq7Rg"
+  </div>
+
+  <div>
+
+
+
+   <div class="introduction">
+      <p  class="intro">
+          How to put an HTML website online (on the Internet)
+      </p>
+   </div>
+  
+  </div>
+</div>
+
+  
+</div>
+
+<div>  
+  <div>
+   <img class="pct1"  width="100%" src="https://i.ytimg.com/vi/p1QU3kLFPdg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnxuRiVlwwfIWUI0t-nSFxwCq7Rg"
+  </div>
+
+  <div>
+
+ 
+
+   <div class="introduction">
+      <p  class="intro">
+          How to put an HTML website online (on the Internet)
+      </p>
+   </div>
+  
+  </div>
+</div>
+
+  
+</div>
+
+<div>  
+  <div>
+   <img class="pct1"  width="100%" src="https://i.ytimg.com/vi/p1QU3kLFPdg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnxuRiVlwwfIWUI0t-nSFxwCq7Rg"
+  </div>
+
+  <div>
+
+   <div class="introduction">
+      <p  class="intro">
+          How to put an HTML website online (on the Internet)
+      </p>
+   </div>
+  
+  </div>
+</div>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+  
+<div class="click-head-picture">
+  <ul>
+    <li>账号信息</li>
+    <li>个人资料</li>
+    <li>实名认证</li>
+
+  </ul>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      click();
+  });
+  
+  function click() {
+      const h = document.querySelector('.head-picture');
+      const c = document.querySelector('.click-head-picture');
+      let m=false;
+      h.addEventListener('click', function() {
+         m=!m;
+         c.style.display = m?'flex':'none';
+      }); 
+     
+      
+  }
+  </script>
+  
+
+</body>
 </html>
