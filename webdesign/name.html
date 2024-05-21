@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实名认证</title>
+    <style>body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .container {
+      width: 80%;
+      max-width: 500px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+      text-align: center;
+      color: #333;
+  }
+  
+  .form-group {
+      margin: 15px 0;
+  }
+  
+  label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+  
+  input[type="text"], input[type="file"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+  }
+  
+  button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  button:hover {
+      background: #0056b3;
+  }
+  
+  #photo-preview {
+      display: block;
+      margin-top: 10px;
+      max-width: 100%;
+      height: auto;
+  }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>实名认证</h1>
+        <form id="auth-form">
+            <div class="form-group">
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="id-number">身份证号码:</label>
+                <input type="text" id="id-number" name="id-number" required>
+            </div>
+            <div class="form-group">
+                <label for="id-photo">上传身份证照片:</label>
+                <input type="file" id="id-photo" name="id-photo" accept="image/*" required>
+                <img id="photo-preview" src="#" alt="照片预览" style="display:none;">
+            </div>
+            <button type="submit">提交认证</button>
+        </form>
+    </div>
+
+    <script>document.getElementById('id-photo').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+              const photoPreview = document.getElementById('photo-preview');
+              photoPreview.src = e.target.result;
+              photoPreview.style.display = 'block';
+          }
+          reader.readAsDataURL(file);
+      }
+  });
+  
+  document.getElementById('auth-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      // 获取表单数据
+      const name = document.getElementById('name').value;
+      const idNumber = document.getElementById('id-number').value;
+      const idPhoto = document.getElementById('id-photo').files[0];
+  
+      // 模拟表单提交
+      console.log('姓名:', name);
+      console.log('身份证号码:', idNumber);
+      console.log('身份证照片:', idPhoto);
+  
+      // 实际应用中，在这里执行AJAX请求或表单提交操作
+      alert('实名认证信息已提交！');
+  });
+  </script>
+</body>
+</html>

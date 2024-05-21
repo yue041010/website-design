@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>注册新账号</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="modal" id="registerModal">
+<div class="modal-content">
+<h2>注册新账号</h2>
+<form class="form-group">
+<label for="username">用户名:</label>
+<input type="text" id="username" name="username" required placeholder="请输入您的用户名 (6-12个字符)">
+<br>
+<label for="password">密码:</label>
+<input type="password" id="password" name="password" required placeholder="请输入您的密码 (8-16位)">
+<br>
+<label for="confirmPassword">确认密码:</label>
+<input type="password" id="confirmPassword" name="confirmPassword" required placeholder="请再次输入您的密码">
+<br>
+<button type="submit" id="registerBtn">注册</button>
+</form>
+<button class="close-button" onclick="closeModal('registerModal')">关闭</button>
+</div>
+</div>
+</body>
+</html>
