@@ -1,17 +1,16 @@
-body{
+body {
   background-color: rgba(0, 0, 0, 0.05);
   padding-left: 70px;
   padding-top: 120px;
 }
 
-
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
 /*头部框*/
-.head{
+.head {
   padding: 10px;
   background-color: rgb(229, 237, 221);
   display: flex;
@@ -19,51 +18,49 @@ a{
   position: fixed;
   top: 0px;
   left: 0px;
-  right: 0px; 
+  right: 0px;
   transition: 0.1s;
-}  
-.head-left{
+}
+.head-left {
   display: flex;
   width: 200px;
   margin-right: 100px;
   padding-left: 45px;
-  
-}  
-.head-mid{
+}
+.head-mid {
   display: flex;
   flex: 1;
-}  
-.head-mid input{
+}
+.head-mid input {
   flex: 1;
-  border-color:rgba(0,0,0,1);
-  margin-right:-1px;
-  border-width:1px;
-  border-style:solid;
+  border-color: rgba(0, 0, 0, 1);
+  margin-right: -1px;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 10px 0 0 10px;
 }
-.head-mid img{
-  padding-top:2px;
-  border-width:1px;
-  border-style:solid;
-  border-color:rgba(0,0,0,1);
+.head-mid img {
+  padding-top: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 1);
   border-radius: 0 10px 10px 0;
   cursor: pointer;
 }
-.head-right{
+.head-right {
   display: flex;
   width: 300px;
   margin-left: 50px;
 }
-.head-picture{
-  margin-left:230px;
-  border-radius:22px;
+.head-picture {
+  margin-left: 230px;
+  border-radius: 22px;
   vertical-align: middle;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-
 /*课程导航栏*/
-.course{
+.course {
   background-color: rgb(229, 237, 221);
   position: fixed;
   top: 55px;
@@ -71,9 +68,9 @@ a{
   right: 0;
   height: 35px;
   overflow-x: auto;
-  border: 1px solid rgba(0,0,0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   padding-left: 80px;
-}  
+}
 .course li {
   margin-top: 5px;
   padding: 3px;
@@ -83,27 +80,25 @@ a{
   list-style: none;
   margin-right: 20px;
   color: black;
-  background-color: rgba(0,0,0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   font-size: 14px;
   transition: 0.1s;
   cursor: pointer;
 }
-.course li:hover{
-  background-color: rgba(0,0,0, 0.2);
+.course li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
-.course li:active{
-  background-color: rgba(0,0,0, 1);
+.course li:active {
+  background-color: rgba(0, 0, 0, 1);
   color: white;
 }
-.course li:visited{
-  background-color: rgba(0,0,0, 1);
+.course li:visited {
+  background-color: rgba(0, 0, 0, 1);
   color: white;
 }
-
-
 
 /*左侧导航栏*/
-.navigate{
+.navigate {
   display: flex;
   flex-flow: column;
   position: fixed;
@@ -111,9 +106,9 @@ a{
   left: 0px;
   height: 400px;
   width: 50px;
-
 }
-.homepage-icon,.playlist-icon{
+.homepage-icon,
+.playlist-icon {
   color: black;
   text-decoration: none;
   height: 55px;
@@ -124,93 +119,93 @@ a{
   transition: 0.1s;
   cursor: pointer;
 }
-.homepage-icon:hover,.game-icon:hover,.playlist-icon:hover{
-  background-color: rgba(0,0,0, 0.1);
+.homepage-icon:hover,
+.game-icon:hover,
+.playlist-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-
 /*视频*/
-.vdo{
+.vdo {
   padding: 20px;
-  box-shadow: rgba(0,0,0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  background-color: rgba(0, 0, 0,0.07);
+  background-color: rgba(0, 0, 0, 0.07);
   display: grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 15px;
   row-gap: 20px;
 }
-.pct1{
+.pct1 {
   border-radius: 15px;
 }
-.intro{
+.intro {
   width: 240px;
   font-size: 13px;
   margin-top: 0px;
   font-weight: bold;
 }
 
-
 /*点击头像后*/
-.click-head-picture{
-transition: 0.1s;
-display: none;
-box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.5);
-background-color: rgb(220, 217, 217);
-border-radius: 3px;
-position:fixed;
-top: 10px;
-right: 90px;
-width: 130px;
-height: 200px;
+.click-head-picture {
+  transition: 0.1s;
+  display: none;
+  box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.5);
+  background-color: rgb(220, 217, 217);
+  border-radius: 3px;
+  position: fixed;
+  top: 10px;
+  right: 90px;
+  width: 130px;
+  height: 200px;
 }
-.click-head-picture ul{
-margin-top: 60px;
-padding: 0px;
-width: 100%;
-list-style-type: none;
-font-size: 13px;
-line-height: 20px;
+.click-head-picture ul {
+  margin-top: 60px;
+  padding: 0px;
+  width: 100%;
+  list-style-type: none;
+  font-size: 13px;
+  line-height: 20px;
 }
 
-.click-head-picture li{
-transition: 0.1s;
-line-height: 21px;
-padding-left: 15px;
-cursor: pointer;
+.click-head-picture li {
+  transition: 0.1s;
+  line-height: 21px;
+  padding-left: 15px;
+  cursor: pointer;
 }
-.click-head-picture li:hover{
-background-color: rgba(0,0,0,0.1);
-font-size: 15px;
+.click-head-picture li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 15px;
 }
 
 /*课程部分*/
-#course-introsuction,#instrument,#vedio{
+#course-introsuction,
+#instrument,
+#vedio {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.paragraph{
+.paragraph {
   color: black;
   font-size: small;
   text-decoration: none;
 }
-.paragraph:hover{
-  text-decoration-line:underline;
+.paragraph:hover {
+  text-decoration-line: underline;
 }
 
-
-.guide{
+.guide {
   position: fixed;
   right: 0px;
   top: 200px;
   width: 100px;
   height: auto;
-  background-color: rgba(0,0,0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  
-  }
-  
-  .guide a{
+}
+
+.guide a {
   display: block;
   font-size: 15px;
   color: black;
@@ -221,8 +216,8 @@ font-size: 15px;
 
   text-decoration: none;
   cursor: pointer;
-  }
-  .guide a:hover{
-  background-color: rgba(0,0,0,0.1);
+}
+.guide a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
   font-size: 18px;
-  }
+}

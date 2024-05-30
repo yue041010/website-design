@@ -1,160 +1,202 @@
 <!DOCTYPE html>
 <html>
-  <head>   
-    
-  
-    <link 
-    rel="stylesheet"
-    href="web.css" >
-
+  <head>
+    <link rel="stylesheet" href="web.css" />
   </head>
-  
 
+  <body
+    style="
+      background-color: rgba(0, 0, 0, 0.05);
+      padding-left: 70px;
+      padding-top: 45px;
+    "
+  >
+    <div class="head">
+      <div class="head-left"></div>
 
-<body style="
-background-color: rgba(0, 0, 0, 0.05);
-padding-left: 70px;
-padding-top: 45px;
-">
+      <div class="head-mid">
+        <input type="text" placeholder="搜索" />
 
-  <div class="head">
-    <div class="head-left">
+        <img
+          height="34.5px"
+          src="http://picture.gptkong.com/20240513/1824ea1a3fc9644e828742196687baf56a.png"
+        />
+      </div>
 
+      <div class="head-right">
+        <img
+          class="head-picture"
+          height="100%"
+          src="http://picture.gptkong.com/20240513/18201557fcf764432083ddb4edcf74a860.jpg"
+        />
+      </div>
     </div>
-
-    <div class="head-mid">
-      <input type="text" placeholder="搜索">
-    
-      <img height="34.5px" src="http://picture.gptkong.com/20240513/1824ea1a3fc9644e828742196687baf56a.png">
-    </div>
-    
-    <div class="head-right">
-      <img  class="head-picture"     height="100%"  src="http://picture.gptkong.com/20240513/18201557fcf764432083ddb4edcf74a860.jpg">
-    </div>
-  </div>
 
     <div class="navigate">
-
       <a href="index.html">
         <div class="homepage-icon">
-          <div style="margin-top: 5px; width: 30px;  height: 30px; display: block; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><g><path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z"></path></g></svg>  
-          <p style="
-          font-size: 10px; 
-          margin: 0px;
-          vertical-align: top;
-          text-align: center;
-          ">首页</p>
+          <div
+            style="
+              margin-top: 5px;
+              width: 30px;
+              height: 30px;
+              display: block;
+              fill: currentcolor;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 24 24"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <g>
+                <path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z"></path>
+              </g>
+            </svg>
+            <p
+              style="
+                font-size: 10px;
+                margin: 0px;
+                vertical-align: top;
+                text-align: center;
+              "
+            >
+              首页
+            </p>
           </div>
         </div>
       </a>
 
-
-  
       <a href="playlist.html">
         <div class="playlist-icon">
-          <div style="width: 25px; padding-left: 4px; 
-          height: 30px; display: block; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M15 19v-8l7 4-7 4Zm7-12H2v2h20V7Zm-9 6H2v-2h11v2Zm0 4H2v-2h11v2Z"></path></svg></div>
-          
+          <div
+            style="
+              width: 25px;
+              padding-left: 4px;
+              height: 30px;
+              display: block;
+              fill: currentcolor;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                d="M15 19v-8l7 4-7 4Zm7-12H2v2h20V7Zm-9 6H2v-2h11v2Zm0 4H2v-2h11v2Z"
+              ></path>
+            </svg>
+          </div>
         </div>
       </a>
 
-      <p style="
-      font-size: 10px; 
-      margin: 0px;
-      margin-top: -30px;
-      vertical-align: top;
-      text-align: center;
-      ">列表</p>
-
-    </div>
-  
-  <h2>播放列表</h2>
-
-  <div style="
-  padding: 20px;
-  display: grid;
-  width: 1fr;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 15px;
-  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
-  ">
-  <div>
-    <div>
-      <img class="pct1"  width="100%" src="https://i.ytimg.com/vi/p1QU3kLFPdg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnxuRiVlwwfIWUI0t-nSFxwCq7Rg"
-     </div>
-   
-     <div>
-   
-   
-   
-      <div class="introduction">
-         <p  class="intro">
-             How to put an HTML website online (on the Internet)
-         </p>
-      </div>
-     
-     </div>
-  </div>
-
-  </div>
-
-
-  <div class="click-head-picture">
-
-    <div style="
-    display: flex;
-      position: fixed;
-      top: 8px;
-      right: 90px;
-      height: 50px;
-      width: 130px;
-      border-radius: 5px;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgba(0, 0, 0, 0.2);
-      ">
-     
-      <img    height="100%"  src="http://picture.gptkong.com/20240513/18201557fcf764432083ddb4edcf74a860.jpg"
-      style="border-radius: 50%;"
+      <p
+        style="
+          font-size: 10px;
+          margin: 0px;
+          margin-top: -30px;
+          vertical-align: top;
+          text-align: center;
+        "
       >
-  
-        <a href="login.html" style="
-        margin-top: 18px;
-        margin-left: 5px;
-        cursor: pointer;
-        ">
-          <button
-          style="font-size: 12px;
-          border: none;">登录</button>
-        
-        </a>
-     
-   
-  
+        列表
+      </p>
     </div>
-  
-    <ul>
-      <a href="information.html"><li>账号信息</li></a>
-      <a href="name.html"><li>实名认证</li></a>
-    </ul>
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        click();
-    });
-    
-    function click() {
-        const h = document.querySelector('.head-picture');
-        const c = document.querySelector('.click-head-picture');
-        let m=false;
-        h.addEventListener('click', function() {
-           m=!m;
-           c.style.display = m?'flex':'none';
-        }); 
-       
-        
-    }
-    </script>
 
-</body>
+    <h2>播放列表</h2>
+
+    <div
+      style="
+        padding: 20px;
+        display: grid;
+        width: 1fr;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 15px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      "
+    >
+      <div>
+        <div>
+          <img class="pct1" width="100%"
+          src="https://i.ytimg.com/vi/p1QU3kLFPdg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnxuRiVlwwfIWUI0t-nSFxwCq7Rg"
+        </div>
+
+        <div>
+          <div class="introduction">
+            <p class="intro">
+              How to put an HTML website online (on the Internet)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="click-head-picture">
+      <div
+        style="
+          display: flex;
+          position: fixed;
+          top: 8px;
+          right: 90px;
+          height: 50px;
+          width: 130px;
+          border-radius: 5px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgba(0, 0, 0, 0.2);
+        "
+      >
+        <img
+          height="100%"
+          src="http://picture.gptkong.com/20240513/18201557fcf764432083ddb4edcf74a860.jpg"
+          style="border-radius: 50%"
+        />
+
+        <a
+          href="login.html"
+          style="margin-top: 18px; margin-left: 5px; cursor: pointer"
+        >
+          <button style="font-size: 12px; border: none">登录</button>
+        </a>
+      </div>
+
+      <ul>
+        <a href="information.html"><li>账号信息</li></a>
+        <a href="name.html"><li>实名认证</li></a>
+      </ul>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        click();
+      });
+
+      function click() {
+        const h = document.querySelector(".head-picture");
+        const c = document.querySelector(".click-head-picture");
+        let m = false;
+        h.addEventListener("click", function () {
+          m = !m;
+          c.style.display = m ? "flex" : "none";
+        });
+      }
+    </script>
+  </body>
 </html>
